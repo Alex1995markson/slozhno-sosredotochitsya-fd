@@ -60,9 +60,15 @@
   box-sizing: border-box;
 }
 
+.header__theme-menu-button_active {
+  border: 1px solid var(--color);
+}
+
 .header__theme-menu-button:hover {
   border-color: var(--color);
 }
+
+
 
 .header__theme-menu-button:active {
   outline: none;
