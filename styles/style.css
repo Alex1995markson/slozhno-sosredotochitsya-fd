@@ -29,13 +29,12 @@
 
 .header__theme-menu {
   grid-column: 2;
-  align-items: center;
-  justify-self: center;
 }
 
 .header__theme-menu-list {
   list-style: none;
   display: flex;
+  justify-content: center;
   gap: 10px;
   padding-inline-start: 0px;
 }
