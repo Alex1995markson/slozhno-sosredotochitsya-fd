@@ -7,10 +7,10 @@
   font-family: var(--font-family);
   font-size: var(--main-size-font);
   background-image: var(--background-image-header);
-  background-position: cover;
+  background-position: cover center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 1024px;
+  max-width: 1024px;
   margin: auto;
 }
 
