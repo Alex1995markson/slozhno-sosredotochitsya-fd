@@ -1,5 +1,542 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--background-color);
+  color: var(--color);
+  font-family: var(--font-family);
+  font-size: var(--main-size-font);
+  width: 1024px;
+  margin: auto;
+}
+
+.header {
+  background-image: var(--background-image-header);
+  background-position: center center;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-columns: repeat(3, 1f);
+  grid-template-rows: 2fr 1fr 2fr;
+  gap: 20px;
+  padding: var(--padding);
+  margin-block-end: var(--margin-block-end);
+  position: relative;
+  min-height: 100vh;
+}
+
+.header__theme-menu {
+  grid-column: 2;
+  align-items: center;
+  justify-self: center;
+}
+
+.header__theme-menu-list {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding-inline-start: 0px;
+}
+
+.header__theme-menu-item {
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.header__theme-menu-button {
+  display: block;
+  padding: 5px 15px;
+  text-transform: lowercase;
+  background-color: transparent;
+  color: var(--color);
+  outline: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.header__theme-menu-button:hover {
+  border-color: var(--color);
+}
+
+.header__theme-menu-button:active {
+  outline: none;
+}
+
+.header__theme-menu-button_active {}
+
+.header__title {
+  text-align: left;
+  grid-column: 1 / span 3;
+  grid-row: 2;
+}
+
+.title-decoration {
+  font-size: 157px;
+  font-weight: 700;
+  line-height: 129.53px;
+  margin: 0;
+  color: var(--color-header);
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-shadow: 4px 4px #FF0070;
+}
+
+.header__quote {
+  max-width: 491px;
+  max-height: 71px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  grid-column: 2 / span 2;
+  grid-row: 3;
+  justify-self: self-end;
+  align-self: center;
+
+  color: var(--color-text);
+  background-color: var(--background-color-small-block);
+}
+
+/* block with after&before elements */
+
+.corner-box_top-right::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border-top: 2px solid var(--color-border);
+  border-right: 2px solid var(--color-border);
+}
+
+.corner-box_bottom-left::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 30px;
+  height: 30px;
+  border-bottom: 2px solid var(--color-border);
+  border-left: 2px solid var(--color-border);
+}
+
+.rec-indicator {
+  position: relative;
+}
+
+.rec-indicator {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: var(--indicator-color);
+}
+
+.rec-indicator__dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--indicator-color);
+  border-radius: 50%;
+  margin-left: 8px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* === end === */
+
+/* first article  */
+
+.article {
+  padding: var(--padding);
+  margin-block-end: var(--margin-block-end);
+}
+
+.article--layout-two-columns {
+  display: grid;
+  grid-template-columns: 315px 650px;
+  grid-template-rows: 508px;
+  gap: 20px;
+}
+
+.article__title {
+  grid-column: 1;
+  font-size: var(--main-size-font);
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.article--two-column>.article__content {
+  grid-column: 2;
+}
+
+.card {
+  padding-block-end: var(--padding-card);
+}
+
+.card__title {
+  color: var(--color-text);
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-block-end: var(--margin-card-title);
+  display: block;
+  background-color: var(--background-color-small-block);
+}
+
+.card__description {
+  font-weight: 400;
+  line-height: 23.4px;
+  text-align: left;
+  color: var(--color-text-article);
+}
+
+/* second article */
+
+.article--three-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 6fr;
+  gap: 20px;
+}
+
+.article--three-columns>.card--multitasking_second {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.article--three-columns>.card--food {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.article--three-columns>.card--gudget {
+  grid-column: 3;
+  grid-row: 2;
+
+}
+
+/* third article */
+
+/* TODO Add right margin/padding for title in right column 
+*/
+
+span.card__title {
+  font-weight: normal;
+}
+
+.tile {
+  margin-top: 550px;
+  /* fix must do */
+  padding: var(--padding);
+}
+
+.tile__title {
+  color: var(--color-text);
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-block-end: var(--margin-card-title);
+  display: block;
+  background-color: var(--background-color-small-block);
+}
+
+.tile__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 315px);
+  grid-template-rows: repeat(3, 260px);
+  grid-auto-flow: dense;
+  gap: 20px;
+  box-sizing: border-box;
+  min-block-size: calc(100vh - 5em);
+}
+
+.tile__item {
+  box-sizing: border-box;
+  min-block-size: 4.3em;
+  margin: 0;
+}
+
+.tile__image {
+  inline-size: 100%;
+  block-size: 100%;
+  max-block-size: 100%;
+  object-fit: cover;
+}
+
+.tile__item:nth-child(1) {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.tile__item:nth-child(3) {
+  grid-column: 2 / 4;
+  grid-row: 3;
+}
+
+.tile__item:nth-child(2) {
+  grid-column: 3;
+  grid-row: 1 / 3;
+}
+
+.tile__item:nth-child(4) {
+  grid-column: 1;
+  grid-row: 2 / 4;
+}
+
+.footer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--padding);
+  position: relative;
+  padding: var(--padding);
+  margin-block-end: var(--margin-block-end);
+}
+
+.footer__title {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* media query */
+
+@media (375px <=width <=768px) {
+  .page {
+    /* TODO change */
+    width: 768px;
+    margin: auto;
+  }
+
+  .header {
+    grid-template-columns: 236px 108px 364px;
+    grid-template-rows: 443px 101px 443px;
+    min-height: 768px;
+    /*  когда задаешь высоту для элемента получается почти правильно*/
+  }
+
+  .header__theme-menu {
+    grid-column: 3;
+    justify-self: flex-end;
+    align-self: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+  }
+
+  .title-decoration {
+    font-size: 99px;
+    line-height: 99px;
+  }
+
+  .article--layout-two-columns {
+    grid-template-columns: 236px 472px;
+    grid-template-rows: 648px;
+    gap: 20px;
+    height: 648px;
+  }
+
+  .article--three-columns {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr;
+    gap: 20px;
+  }
+
+  .article--three-columns>.article__title {
+    grid-column: 1 / 2;
+    grid-row: 1;
+  }
+
+  .article--three-columns>.card--multitasking_second {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+
+  .article--three-columns>.card--food {
+    grid-column: 1 / 3;
+    grid-row: 3;
+  }
+
+  .article--three-columns>.card--gudget {
+    grid-column: 1 / 3;
+    grid-row: 4;
+  }
+
+  .long {
+    height: 1296px;
+  }
+
+  .tile {
+    margin-top: 0;
+    padding: var(--padding);
+  }
+
+  .tile__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 229px);
+    grid-template-rows: repeat(3, 260px);
+    grid-auto-flow: dense;
+    gap: 20px;
+    box-sizing: border-box;
+    min-block-size: calc(100vh - 5em);
+    height: 100vh;
+  }
+
+}
+
+@media (max-width: 375px) {
+  .page {
+    /* TODO change */
+    width: 375px;
+    margin: auto;
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2fr 1fr 2fr;
+    min-height: 668px;
+    /*  когда задаешь высоту для элемента получается почти правильно*/
+  }
+
+  .header__theme-menu {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: flex-end;
+    align-self: center;
+  }
+
+  .header__title {
+    text-align: left;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .header__quote {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    justify-self: center;
+    align-self: center;
+    max-width: 355px;
+    max-height: 117px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+  }
+
+  .title-decoration {
+    font-size: 99px;
+    line-height: 99px;
+  }
+
+  .article--layout-two-columns {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+  }
+
+  .article--three-columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+  }
+
+  .article--three-columns>.article__title {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .article--three-columns>.card--multitasking_second {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .article--three-columns>.card--food {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .article--three-columns>.card--gudget {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .long {
+    height: 1796px;
+  }
+
+  .tile {
+    margin-top: 0;
+    padding: var(--padding);
+  }
+
+  .tile__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 355px 1fr 1fr 355px;
+    grid-auto-flow: dense;
+    gap: 20px;
+    box-sizing: border-box;
+  }
+
+  .tile__item:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .tile__item:nth-child(3) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .tile__item:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .tile__item:nth-child(4) {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .tile__item:nth-child(5) {
+    grid-column: 1;
+    grid-row: 5;
+  }
 }

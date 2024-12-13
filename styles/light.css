@@ -14,3 +14,41 @@
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
 }
+
+/*
+  Специально для светлой темы при наличии класса.
+  Здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+.page.theme_light {
+
+  --background-color: #FFF1F7;
+  --background-color-small-block: #FF8DCB;
+
+  --color-border: #353430;
+  --color-header: #FFC2E6;
+
+  --color: #353430;
+  --color-text: #353430;
+  --color-text-article: #353430;
+  --background-image-header: url("../images/cover-image-light.png");
+
+  --indicator-color: transparent;
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --background-color: #FFF1F7;
+      --background-color-small-block: #FF8DCB;
+
+      --color-border: #353430;
+      --color-header: #FFC2E6;
+      --color: #353430;
+      --color-text: #353430;
+
+      --background-image-header: url("../images/cover-image-light.png");
+
+      --indicator-color: transparent;
+    }
+  }
+}
