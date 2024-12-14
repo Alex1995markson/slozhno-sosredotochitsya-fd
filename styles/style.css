@@ -10,37 +10,32 @@
   background-position: cover center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  max-width: 1024px;
-  margin: auto;
 }
 
 .header {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr min-content 1fr;
   gap: 20px;
-  padding: var(--header-padding);
+  padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
   position: relative;
-  min-height: 90vh;
+  block-size: 100vh;
 }
 
 .header__theme-menu {
-  grid-column: 2;
+  justify-self: center;
 }
 
 .header__theme-menu-list {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .header__theme-menu-item {
   font-weight: 400;
   line-height: 18px;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 }
 
 .header__theme-menu-button {
@@ -68,7 +63,6 @@
 }
 
 .header__title {
-  grid-column: 1 / span 3;
   grid-row: 2;
   text-indent: -20px;
 }
@@ -81,23 +75,21 @@
   font-size: 157px;
   font-weight: 700;
   line-height: 129.53px;
-  padding-top: 20px;
   color: var(--color-header);
   text-shadow: 4px 4px #FF0070;
 }
 
 .header__quote {
   box-sizing: border-box;
-  max-width: 491px;
-  max-height: 71px;
+  inline-size: 50%;
+  margin-block-end: 34px;
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
-  text-align: left;
 
-  grid-column: 2 / span 2;
   grid-row: 3;
-  justify-self: self-end;
+  align-self: center;
+  justify-self: end;
 
   color: var(--color-text);
   background-color: var(--background-color-small-block);
@@ -161,6 +153,10 @@
 
 /* === end === */
 
+main {
+  margin-block-end: 60px;
+}
+
 /* first article  */
 
 .article {
@@ -181,8 +177,6 @@
   font-weight: 700;
   line-height: 23.4px;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 }
 
 .article--two-column>.article__content {
@@ -195,15 +189,12 @@
 
 .card__title {
   color: var(--color-text);
-  font-family: IBM Plex Mono;
+  font-family: var(--font-family);
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  margin-block-end: var(--margin-card-title);
   display: block;
+  margin-block-end: var(--margin-card-title);
   background-color: var(--background-color-small-block);
 }
 
@@ -263,15 +254,12 @@ span.card__title {
 
 .tile__title {
   color: var(--color-text);
-  font-family: IBM Plex Mono;
+  font-family: var(--font-family);
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  margin-block-end: var(--margin-card-title);
   display: block;
+  margin-block-end: var(--margin-card-title);
   background-color: var(--background-color-small-block);
 }
 
@@ -317,20 +305,20 @@ span.card__title {
   grid-row: 2 / 4;
 }
 
+
+
 .footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 20px;
-  padding: var(--header-padding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  min-height: 769px;
+  inline-size: 100%;
+  block-size: 100vh;
 }
 
 .footer__title {
-  grid-column: 2;
-  grid-row: 2;
-  text-indent: -20px;
+  justify-self: start;
+  align-self: center;
 }
 
 .footer__title span {
