@@ -73,7 +73,6 @@
 
 .header__title {
   grid-row: 2;
-  margin-inline-start: -20px;
 }
 
 .header__title span {
