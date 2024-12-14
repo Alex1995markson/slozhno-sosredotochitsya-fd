@@ -13,7 +13,7 @@
 
 .header {
   display: grid;
-  grid-template-rows: 1fr min-content 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 30px;
   padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
   position: relative;
@@ -76,7 +76,7 @@
 }
 
 .header__title span {
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  /* font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); */
 }
 
 .title-decoration {
@@ -100,7 +100,6 @@
 
   color: var(--color-text);
   background-color: var(--background-color-small-block);
-  margin-block-end: 34px;
 }
 
 /* block with after&before elements */
