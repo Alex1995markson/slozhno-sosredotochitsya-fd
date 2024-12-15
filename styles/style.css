@@ -13,11 +13,13 @@
 
 .header {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 30px;
-  padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  padding: 16px 0 18px;
   position: relative;
+  inline-size: 100%;
   block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .decorated-zone::before {
