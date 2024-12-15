@@ -1,4 +1,4 @@
-.page.theme_light {
+:root.theme-light {
   /* COLORS */
 
   --bg-color: #ffeef5;
@@ -9,7 +9,7 @@
   --fancy-color: #353430;
   --faded-color: #36353066;
   --modified-title: #fd026f;
-  background-image: url(../images/cover-image-light.png);
+  --background-images: url(../images/cover-image-light.png);
 }
 
 .theme_light .header__rec,
@@ -33,7 +33,7 @@
   }
 
   .page {
-    background-image: url(../images/cover-image-light.png);
+      --background-image: url(../images/cover-image-light.png);
   }
 
   .header__rec,

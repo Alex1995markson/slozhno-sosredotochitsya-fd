@@ -1,13 +1,14 @@
 :root {
   /* COLORS */
-  --bg-color: #000028;
-  --text-color: #f1b2ce;
-  --accent-color: #ff0070;
-  --big-title: #db00ff;
-  --decor-color: #000028;
-  --fancy-color: #ff0070;
-  --faded-color: #ff007066;
-  --modified-title: #ff0070;
+  --bg-color: #ffeef5;
+  --text-color: #353430;
+  --accent-color: #ff8dcb;
+  --big-title: #ffc2e6;
+  --decor-color: #353430;
+  --fancy-color: #353430;
+  --faded-color: #36353066;
+  --modified-title: #fd026f;
+  --background-image: url(../images/cover-image-light.png);
 
   /* FONTS */
   --main-font: 'IBM Plex Mono';

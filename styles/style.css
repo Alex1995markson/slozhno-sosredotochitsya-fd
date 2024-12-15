@@ -1,14 +1,13 @@
 /* GENERAL STYLES FOR THE ENTIRE PAGE*/
 
 .page {
-  /* padding: 0 10px; */
   color: var(--text-color);
   font-family: var(--main-font, sans-serif);
   font-weight: var(--text-weight);
   font-size: var(--text-size);
   line-height: var(--line-height);
   background-color: var(--bg-color);
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

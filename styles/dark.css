@@ -1,4 +1,4 @@
-.page.theme_dark {
+:root.theme-dark {
   /* COLORS */
 
   --bg-color: #000028;
@@ -9,10 +9,10 @@
   --fancy-color: #ff0070;
   --faded-color: #ff007066;
   --modified-title: #ff0070;
-  background-image: url(../images/cover-image-dark.png);
+  --background-image: url(../images/cover-image-dark.png);
 }
 
-.theme_dark .header__rec,
-.theme_dark .header__rec::after {
+:root.theme-dark .header__rec,
+:root.theme-dark .header__rec::after {
   display: flex;
 }
