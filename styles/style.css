@@ -27,6 +27,7 @@
   grid-template-rows: repeat(3, 1fr);
   padding: 16px 0 18px;
   color: var(--fancy-color, #ff0070);
+  background-color: var(--bg-color);
 }
 
 /* DECORATIVE ELEMENTS FOR BOTH HEADER AND FOOTER */
@@ -210,6 +211,7 @@
 
 .footer {
   display: flex;
+  background-color: var(--bg-color);
 }
 
 .footer__title {
