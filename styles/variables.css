@@ -1,30 +1,18 @@
 :root {
-  /* common styles for theme */
-  --background-color: #FFF1F7;
-  --background-color-small-block: #FF8DCB;
+  /* COLORS */
+  --bg-color: #000028;
+  --text-color: #f1b2ce;
+  --accent-color: #ff0070;
+  --big-title: #db00ff;
+  --decor-color: #000028;
+  --fancy-color: #ff0070;
+  --faded-color: #ff007066;
+  --modified-title: #ff0070;
 
-  --color-border: #353430;
-  --color-header: #FFC2E6;
-  --color: #353430;
-  --color-text: #353430;
-  --color-text-article: #353430;
-
-  --main-size-font: 18px;
-  --font-family: IBM Plex Mono, monospace;
-
-  --background-image-header: url("../images/cover-image-light.png");
-
-  --indicator-color: transparent;
-
-  /* end */
-
-  --margin-block-end: 30px;
-  --header-padding: 20px 20px 0px 20px;
-  --footer-padding: 60px 20px -10px 20px;
-  --padding: 0px 20px;
-  --padding-card: 20px;
-  --margin-card-title: 10px;
-
-  --margin-block-end-third-block: 65px;
-  /* prepare constant values */
+  /* FONTS */
+  --main-font: 'IBM Plex Mono';
+  --text-size: 18px;
+  --line-height: 23.4px;
+  --text-weight: normal;
+  --heading-weight: bold;
 }
