@@ -19,9 +19,7 @@
 
 @media (prefers-color-scheme: light) {
 
-  :root {
-    /* COLORS */
-
+  :root.theme-light {
     --bg-color: #ffeef5;
     --text-color: #353430;
     --accent-color: #ff8dcb;
@@ -33,7 +31,7 @@
   }
 
   .page {
-      --background-image: url(../images/cover-image-light.png);
+    --background-image: url(../images/cover-image-light.png);
   }
 
   .header__rec,
