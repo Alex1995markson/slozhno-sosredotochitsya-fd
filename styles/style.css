@@ -204,7 +204,7 @@
 }
 
 
-@media (width>=620px) {
+@media (width>=768px) {
 
   .header {
     padding: 105px 0;
