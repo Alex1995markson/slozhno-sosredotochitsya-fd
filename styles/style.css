@@ -256,7 +256,7 @@
     margin-block-end: 20px;
   }
 
-  .update-section {
+  .updated-section {
     display: grid;
     grid-template-columns: 2fr 4fr;
     grid-template-rows: repeat(auto-fit, 1fr);
