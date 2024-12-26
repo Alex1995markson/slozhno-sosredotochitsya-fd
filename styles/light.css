@@ -9,7 +9,7 @@
   --fancy-color: #353430;
   --faded-color: #36353066;
   --modified-title: #fd026f;
-  --background-images: url(../images/cover-image-light.png);
+  --background-image: url(../images/cover-image-light.png);
 }
 
 .theme_light .header__rec,
@@ -19,7 +19,7 @@
 
 @media (prefers-color-scheme: light) {
 
-  :root.theme-light {
+  :root {
     --bg-color: #ffeef5;
     --text-color: #353430;
     --accent-color: #ff8dcb;
@@ -28,10 +28,6 @@
     --fancy-color: #353430;
     --faded-color: #36353066;
     --modified-title: #fd026f;
-  }
-
-  .page {
-    --background-image: url(../images/cover-image-light.png);
   }
 
   .header__rec,
