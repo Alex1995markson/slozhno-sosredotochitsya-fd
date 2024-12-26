@@ -270,10 +270,6 @@
     inline-size: 30%;
   }
 
-  .reasons .content__text-block-item {
-    margin-block-start: 20px;
-  }
-
   .content__text-block-item .content__subtitle {
     margin-block-end: 0;
   }
@@ -326,7 +322,6 @@
 
   .header__theme-menu-list {
     flex-direction: row;
-    gap: 11px;
   }
 
   .header__title {
