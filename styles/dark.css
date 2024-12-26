@@ -12,8 +12,8 @@
   --background-image: url(../images/cover-image-dark.png);
 }
 
-:root.theme-dark .header__rec,
-:root.theme-dark .header__rec::after {
+:root .header__rec,
+:root .header__rec::after {
   display: flex;
 }
 
@@ -31,8 +31,8 @@
     --background-image: url(../images/cover-image-dark.png);
   }
 
-  :root .header__rec,
-  :root .header__rec::after {
+  .header__rec,
+  .header__rec::after {
     display: flex;
   }
 }

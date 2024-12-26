@@ -11,26 +11,8 @@
   --background-image: url(../images/cover-image-light.png);
 }
 
-.theme_light .header__rec,
-.theme_light .header__rec::after {
+.theme-light .header__rec,
+.theme-light .header__rec::after {
   display: none;
 }
 
-@media (prefers-color-scheme: light) {
-
-  :root {
-    --bg-color: #ffeef5;
-    --text-color: #353430;
-    --accent-color: #ff8dcb;
-    --big-title: #ffc2e6;
-    --decor-color: #353430;
-    --fancy-color: #353430;
-    --faded-color: #36353066;
-    --modified-title: #fd026f;
-  }
-
-  .header__rec,
-  .header__rec::after {
-    display: none;
-  }
-}
