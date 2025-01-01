@@ -258,8 +258,8 @@
   .updated-section {
     display: grid;
     grid-template-columns: 2fr 4fr;
-    grid-template-rows: repeat(auto-fit, 1fr);
-    gap: 20px;
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 12px;
   }
 
   .updated-section .content__text-block-item {
@@ -339,4 +339,10 @@
     grid-template-rows: repeat(auto-fit, 1fr);
     gap: 20px;
   }
+}
+
+@media (width<=768px) {
+    .updated-section {
+      gap: 18px;
+    }
 }
