@@ -164,7 +164,7 @@
   margin-block-end: 10px;
 }
 
-:is(.content__text-block-item, .content__text-subblock) .content__paragraph:not(:last-of-type) {
+.content__paragraph:not(:last-of-type) {
   margin-block-end: 10px;
 }
 
@@ -176,7 +176,7 @@
   margin-block-end: 20px;
 }
 
-.content__text-subblock .title-decor {
+.content__text-block-item>.content__text-block-item .title-decor {
   margin-block-start: 20px;
   font-weight: var(--text-weight);
 }
@@ -249,7 +249,7 @@
     margin-block-end: 80px;
   }
 
-  :is(.content__text-block-item, .content__text-subblock) .content__paragraph:not(:last-of-type) {
+  .content__text-block-item .content__paragraph:not(:last-of-type) {
     margin-block-end: 20px;
   }
 
