@@ -10,8 +10,8 @@
   --background-image: url(../images/cover-image-dark.png);
 }
 
-:root .header__rec,
-:root .header__rec::after {
+:root.theme-dark .header__rec,
+:root.theme-dark .header__rec::after {
   display: flex;
 }
 
